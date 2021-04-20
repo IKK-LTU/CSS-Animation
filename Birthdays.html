@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="GCD" content="YTk3ODQ3ZWZhN2I4NzZmMzBkNTEwYjJl80bb0115ecf28bfeca233c247444b9a4" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Google Web Designer 10.0.2.0105" />
+    <meta name="template" content="Banner 3.0.0" />
+    <meta name="environment" content="gwd-genericad" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style type="text/css">
+        .fadein {
+            opacity: 0;
+            -moz-transition: opacity 1.5s;
+            -webkit-transition: opacity 1.5s;
+            -o-transition: opacity 1.5s;
+            transition: opacity 1.5s;
+        }
+
+        body.loaded .fadein {
+            opacity: 1;
+        }
+
+        html,
+        body {
+            width: 1920px;
+            height: 1080px;
+            margin: 0px;
+        }
+
+        @font-face {
+        font-family: Avalon;
+        src: url(Avalon-Medium-webfont.ttf);
+        }
+
+        .gwd-p-1dis {
+            position: absolute;
+            font-family: Avalon;
+            color: #fff;
+            font-size: 80px;
+            top: 275px;
+            left: 119px;
+        }
+        
+        .gwd-p-1ppd {
+            font-family: Avalon;
+            font-size: 36px;
+            color: #23e6a8;
+            top: 605px;
+        }
+        
+        .page-container {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-image: url('./Back.jpg');
+        }
+        
+        .container-names,
+        .container-images {
+            display: flex;
+            flex-direction: column;
+            width: 49%;
+            height: 100%;
+            margin-top: 5%;
+            will-change: transform, opacity;
+        }
+        
+        svg {
+            display: block;
+            position: absolute;
+        }
+        
+        .BigCircle {
+            background-color: #1c5826;
+            position:absolute;
+            border-radius: 50%;
+            border: 1px solid black;
+            width: 670px;
+            height: 670px;
+            margin-top: 110px;
+            margin-left: 2%;
+            z-index: 100;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            animation: Show 2s ease-in-out normal 1;
+            object-fit: contain;
+            will-change: transform, opacity;
+            -webkit-transform: translateZ(0);
+            -moz-transform: translateZ(0);
+            -ms-transform: translateZ(0);
+            -o-transform: translateZ(0);
+            transform: translateZ(0);
+            
+        }
+        .BigCirclee {
+            position:absolute;
+            border-radius: 50%;
+            width: 670px;
+            height: 670px;
+            margin-top: 110px;
+            margin-left: 2%;
+            z-index: 100;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .OxyLogo {
+            position :absolute;
+            width: 200px;
+            height: 50px;
+            margin-top: 410px;
+            margin-left: 28%;
+            z-index: 200;
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-position: center;
+            transform:scale(3);
+            animation: Turning 4s ease-in-out infinite;
+        }
+
+        .ball {
+            
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            z-index: 1;
+            border-radius: 50%;
+            border: 1px solid black;
+            animation-fill-mode: forwards;
+            offset-path: path("M445 1.5C503.241 1.5 560.912 12.9715 614.72 35.2594C668.528 57.5474 717.419 90.2154 758.602 131.398C799.785 172.581 832.453 221.472 854.741 275.28C877.029 329.088 888.5 386.759 888.5 445C888.5 503.241 877.029 560.912 854.741 614.72C832.453 668.528 799.785 717.419 758.602 758.602C717.419 799.785 668.528 832.453 614.72 854.741C560.912 877.029 503.241 888.5 445 888.5C386.759 888.5 329.088 877.028 275.28 854.741C221.472 832.453 172.581 799.785 131.398 758.602C90.2152 717.419 57.5473 668.528 35.2593 614.72C12.9714 560.912 1.49997 503.241 1.5 445C1.50003 386.759 12.9715 329.088 35.2595 275.28C57.5475 221.472 90.2155 172.581 131.398 131.398C172.581 90.2152 221.472 57.5473 275.28 35.2593C329.088 12.9714 386.759 1.49996 445 1.5L445 1.5Z");
+            margin-left: -70px;
+            will-change: transform, opacity;
+            -webkit-transform: translateZ(0);
+            -moz-transform: translateZ(0);
+            -ms-transform: translateZ(0);
+            -o-transform: translateZ(0);
+            transform: translateZ(0);
+            object-fit: cover;
+            
+        }
+        .hiden{
+            visibility:hidden;
+        }
+        
+        @keyframes FirstBall0Stops {
+            0% {
+                offset-distance: 0%;
+                visibility: hidden;
+                transform: rotateZ(0);
+                opacity: 0;
+
+            }
+            10%{
+                offset-distance: 2.5%;
+                opacity: 1.0;   
+                visibility: visible;
+            }
+
+            90% {
+                offset-distance: 22.5%;
+                opacity: 1;
+                visibility: visible;
+            }
+            99%,100% {
+                offset-distance: 25%;
+                visibility: hidden;
+                transform: rotateZ(-90deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes FirstBall2Stops {
+            0% {
+                offset-distance: 0%;
+                visibility: hidden;
+                transform: rotateZ(0);
+                opacity: 0;
+
+            }
+            7.14%{
+                offset-distance: 4.16%;
+                opacity: 1.0;   
+                visibility: visible;
+            }
+
+            14.285%{
+                offset-distance: 8.33%;
+                transform: rotateZ(-25deg);
+            }
+            42.855%{
+                offset-distance: 8.33%;
+                transform: rotateZ(-25deg);
+            }
+            
+            57.14% {
+                offset-distance: 16.66%;
+                transform: rotateZ(-60deg);
+            }
+            85.71%{
+                offset-distance: 16.66%;
+                transform: rotateZ(-60deg);
+            }
+            92.86% {
+                offset-distance: 20.84%;
+                opacity: 1;
+                visibility: visible;
+            }
+            99%,100% {
+                offset-distance: 25%;
+                visibility: hidden;
+                transform: rotateZ(-90deg);
+                opacity: 0;
+            }
+        }
+        
+
+        @keyframes SecondBall1Stop {
+            0% {
+                offset-distance: 8.33%;
+                visibility: visible;
+                transform: rotateZ(-30deg);
+            }
+            25%{
+                offset-distance: 16.66%;
+                transform: rotateZ(-60deg);
+            }
+            75%{
+                offset-distance: 16.66%;
+                transform: rotateZ(-60deg);
+            }
+            90% {
+                offset-distance: 23.34%;
+                opacity: 1;
+                visibility: visible;
+            }
+            99%,100% {
+                offset-distance: 25%;
+                visibility: hidden;
+                transform: rotateZ(-90deg);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes ThirdBall0Stops {
+            0% {
+                offset-distance: 16.66%;
+                visibility: visible;
+                transform: rotateZ(-60deg);
+            }
+            12.5%{
+                offset-distance: 19%;
+                 
+                visibility: visible;
+            }
+            80% {
+                offset-distance: 23%;
+                opacity: 0.9;
+                visibility: visible;
+            }
+            99%,100% {
+                offset-distance: 25%;
+                visibility: hidden;
+                transform: rotateZ(-90deg);
+                opacity: 0;
+            }
+        }
+        @keyframes Show {
+            0% {
+                opacity: 0.1;
+            }
+            50%{
+                opacity: 1.0;
+                }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes Showw {
+            0% {
+                opacity: 0.1;
+            }
+            50%{
+                opacity: 1.0;
+            }
+            99% {
+                opacity: 1.0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+         @keyframes Turning {
+            0% {
+                transform:rotateX(0deg) scale(2);
+            }
+            80%,100% {
+                transform:rotateX(360deg) scale(2);
+            }
+        }
+        
+    </style>
+
+    <body >
+        <div class="page-container">
+            <div class="container-names" id="Nam">
+            </div>
+            <div class="container-images">
+                <div>
+                    <svg width="817" height="890" viewBox="0 0 817 890" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="path" fill="none" d="M375.483 775.5V890.5M3 202.769C45.0216 138.717 102.952 86.672 171.122 51.7257C239.292 16.7795 315.367 0.129399 391.903 3.4047C468.438 6.68 542.813 29.7685 607.748 70.4109C672.683 111.053 725.956 167.857 762.352 235.265C798.747 302.672 817.02 378.374 815.382 454.962C813.744 531.55 792.251 606.401 753.007 672.191C713.762 737.98 658.11 792.455 591.496 830.284C524.883 868.113 449.589 888 372.983 888" stroke="#888888" stroke-width="3"/>
+                      </svg>
+                </div>
+
+                <div id="SpinningImages" class="SpinningImages">
+                </div>
+                <div  id="BigCircle" >
+                    <div class="BigCirclee"></div>
+                </div>
+
+
+            </div>
+
+    </body>
+    <script>
+
+        window.onload = function() {
+    document.body.className += " loaded";
+
+
+
+        // var imgArray = [PirmasBD,AntrasBD,TreciasBD,AntrasBD,TreciasBD,AntrasBD,TreciasBD];
+        var Startings = ["ThirdBall0Stops","SecondBall1Stop","FirstBall2Stops"]
+        
+                                                                        //NUOTRAUKOS
+        var Photos = ["Foto1.png","Foto2.png","Foto3.png","Foto1.png"]
+
+
+                                                                        //VARDAS PAVARDE
+        var Names = ["Name1 </br> Surname1","Name2 </br> Surname2","Name3 </br> Surname3","Name4 </br> Surname4"] 
+                                                                        
+        
+                                                                        //GIMIMO DIENA
+        var Birthdays = ["October 1th","October 2th","October 3th","October 4th"]
+
+        if (Photos.length == Names.length && Names.length == Birthdays.length) {
+
+        
+        //Gauname kiek yra gimtadieniu pradedant skaiciuoti nuo nulio
+
+        var numList = [];
+        for (var i = 0; i <= Photos.length - 1; i++) {
+            numList.push(i);
+        }
+
+        var num = 0;
+
+
+        function TextAndImage(delay,fillMode) {
+            
+            //BIG Images
+                numList.forEach((number) => {
+                var y = document.createElement("div");
+                y.classList.add("BigCircle");
+                y.setAttribute("id", number);
+                y.setAttribute("style", "animation-delay:" + (number) * (delay) + "s;");
+                y.style.animationFillMode = fillMode;
+                y.style.backgroundImage = "url('" + Photos[number] + "')";
+                document.getElementById("BigCircle").appendChild(y);
+
+                //Texts
+
+                var div = document.createElement("div");
+                div.style.animationFillMode = fillMode;
+                var pName = document.createElement("p");
+                pName.classList.add("gwd-p-1dis","gwd-grp-1jwb");
+                pName.innerHTML = Names[number];
+                pName.setAttribute("style", "position:absolute; opacity:0; width:49%; height:30%; animation: Showw 3s ease-in-out normal; animation-delay:" + (number) * (delay) + "s;");
+                pName.style.animationFillMode = "none";
+                
+                var pBirthday = document.createElement("p");
+                pBirthday.classList.add("gwd-p-1dis","gwd-grp-1jwb", "gwd-p-1ppd")
+                pBirthday.innerHTML = Birthdays[number];
+                pBirthday.setAttribute("style", "position:absolute; opacity:0; width:49%; height:30%; animation: Showw 3s ease-in-out normal; animation-delay:" + (number) * (delay) + "s;");
+                pBirthday.style.animationFillMode =  "none";
+                div.appendChild(pName);
+                div.appendChild(pBirthday);
+                document.getElementById("Nam").appendChild(div);
+            });
+
+            // const animated =  document.getElementById(number);
+            //  animated.addEventListener('animationend', () => {
+            //         animated.remove(number);
+            //         var x = document.createElement("IMG");
+            //         x.setAttribute("src", Photos[number]);
+            //         x.classList.add("ball","hiden");
+            //         x.setAttribute("id", number);
+            //         x.setAttribute("style", "animation: FirstBall2Stops 7s linear normal 1; animation-delay:" + (((numList.length - 2) * 3) -1) + "s;");
+            //         x.setAttribute("alt", "Image");
+            //         document.getElementById("SpinningImages").appendChild(x);
+            //     });
+    }
+
+    if (numList.length == 0) {
+                console.log("//Jeigu turime 0 karoliuka");
+                
+                
+                var y = document.createElement("div");
+                y.classList.add("OxyLogo");
+                y.style.backgroundImage = "url('LogoNobackground.png')";
+                document.getElementById("BigCircle").appendChild(y);
+
+               
+
+        }
+//Jeigu turime VIENA karoliuka
+            if (numList.length == 1) {
+                console.log("//Jeigu turime VIENA karoliuka");
+                var x = document.createElement("IMG");
+                x.setAttribute("src", Photos[numList]);
+                x.classList.add("ball");
+                x.setAttribute("id", "0");
+                x.setAttribute("style", "animation: FirstBall0Stops 3s linear normal infinite;");
+                x.setAttribute("alt", "Image");
+                x.style.animationFillMode = "forwards";
+               
+                document.getElementById("SpinningImages").appendChild(x);
+                
+
+
+                TextAndImage(6,"forwards");
+
+
+        }
+//Jeigu turime DU karoliuka 
+            if (numList.length == 2) {
+
+                console.log("//Jeigu turime DU karoliukus");
+                var x = document.createElement("IMG");
+                var y = document.createElement("IMG");
+                x.setAttribute("src", Photos[1]);
+                y.setAttribute("src", Photos[0]);
+                x.classList.add("ball");
+                y.classList.add("ball");
+                x.setAttribute("id", "1");
+                y.setAttribute("id", "0");
+                x.setAttribute("style", "animation: SecondBall1Stop 4s linear normal 1;");
+                y.setAttribute("style", "animation: ThirdBall0Stops 1s linear normal 1;" );
+                x.setAttribute("alt", "Image");
+                y.setAttribute("alt", "Image");
+                x.style.animationFillMode = "forwards";
+                y.style.animationFillMode = "forwards";
+               
+                document.getElementById("SpinningImages").appendChild(x);
+                document.getElementById("SpinningImages").appendChild(y);
+
+                    numList.forEach((number) => {
+                    const animated =  document.getElementById(number);
+                        animated.addEventListener('animationend', () => {
+                        var x = document.createElement("IMG");
+                        var newNumber = number+2;
+                x.setAttribute("src", Photos[number]);
+                x.classList.add("ball","hiden");
+                x.setAttribute("id", newNumber);
+                x.setAttribute("style", "animation: FirstBall2Stops 7s linear 10;  animation-delay:2s;");
+                x.setAttribute("alt", "Image");
+                x.style.animationFillMode = "forwards";
+               
+                document.getElementById("SpinningImages").appendChild(x);
+                
+                 });
+                 
+                })
+
+                TextAndImage(3,"forwards");
+                
+        }
+    
+
+//Jeigu turime tris karoliukus
+            if (numList.length == 3  ) {
+            console.log("//Jeigu turime TRIS karoliukus");
+            
+             numList.forEach((number) => {
+                var x = document.createElement("IMG");
+                x.setAttribute("src", Photos[number]);
+                x.classList.add("ball");
+                x.setAttribute("id", number);
+                x.setAttribute("style", "animation:"+ Startings[number] + " " + (1 + (number*3))   + "s linear normal 1"); //+ "animation-delay:" + (number + 1) * (6) + "s;"
+                x.setAttribute("alt", "Image");
+                x.style.animationFillMode = "forwards";
+               
+                document.getElementById("SpinningImages").appendChild(x);
+            });
+
+            TextAndImage(3,"forwards");
+
+            numList.forEach((number) => {
+                const animated =  document.getElementById(number);
+                        animated.addEventListener('animationend', () => {
+                            var newId= number + 4;
+                var x = document.createElement("IMG");
+                x.setAttribute("src", Photos[number]);
+                x.classList.add("ball","hiden");
+                x.setAttribute("id", newId);
+                x.setAttribute("style", "animation: FirstBall2Stops " + " " + (7)   + "s linear normal 1; animation-delay:2s;"); 
+                x.setAttribute("alt", "Image");
+                document.getElementById("SpinningImages").appendChild(x);
+
+                        });
+            });
+        }
+
+        if (numList.length > 3) {
+
+            console.log("//Jeigu turime daugiau negu TRIS karoliukus");
+            TextAndImage(3,"forwards");
+
+            var LeftList=[];
+            var NewnumList = [];
+            var Allindexes = [];
+            NewnumList=[0,1,2];
+
+            for (var i = 3; i <= numList.length -1; i++) {
+            LeftList.push(i);
+        }
+            var LeftListt = LeftList.concat(NewnumList);
+            console.log(NewnumList);
+            console.log(LeftListt);
+
+            for (var i = 0; i <= numList.length -1; i++) {
+            Allindexes.push(i);
+        }
+
+
+            numList.forEach((number) => {
+                var x = document.createElement("IMG");
+                x.setAttribute("src", Photos[number]);
+                x.classList.add("ball");
+                
+                x.setAttribute("id", number);
+                x.setAttribute("style", "animation:"+ Startings[number] + " " + (1 + (3*number))   + "s linear normal 1;" + +"animation-delay:" + (number) * (6) + "s;"); //+ "animation-delay:" + (number + 1) * (6) + "s;"
+                x.setAttribute("alt", "Image");
+                x.style.animationFillMode = "forwards";
+
+                if (number > 2 ){
+                    var delay= number -3;
+                    x.setAttribute("style", "animation: FirstBall2Stops 7s linear normal 1; animation-delay:" + (3 + (delay*3)) + "s;"); //+ "animation-delay:" + (number + 1) * (6) + "s;"
+                    x.classList.add("ball","hiden");
+                    }
+                document.getElementById("SpinningImages").appendChild(x);
+
+                const animated =  document.getElementById(number);
+                
+
+                    animated.addEventListener('animationend', () => {
+                    animated.remove(number);
+                    var x = document.createElement("IMG");
+                    x.setAttribute("src", Photos[number]);
+                    x.classList.add("ball","hiden");
+                    x.setAttribute("id", number);
+                    x.setAttribute("style", "animation: FirstBall2Stops 7s linear normal 1; animation-delay:" + (((numList.length - 2) * 3) -1) + "s;");
+                    x.setAttribute("alt", "Image");
+                    document.getElementById("SpinningImages").appendChild(x);
+                });
+            });
+        };
+    }
+
+    else {
+         alert("Nesutampa ikeltu nuotrauku, vardu ir gimimo datu skaicius");
+    }
+}
+
+
+  
+  
+        </script>
+</head>
+
+
+</html>
